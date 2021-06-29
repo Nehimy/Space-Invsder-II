@@ -12,7 +12,10 @@ var Enemy = load("res://Enemy.tscn")
 func _ready():
 	add_to_group('Universal')
 	NewEnemy()
-
+	$HUD/Label.hide()
+	$HUD/Button.hide()
+	$HUD/Button2.hide()
+	
 func NewEnemy():
 	x = 80
 	while ii <= 6: #6 filas
@@ -41,3 +44,6 @@ func _on_Player_area_entered(area):
 	$Player.hide()
 	area.hide()
 	get_node("Timer").stop()
+	$HUD/Label.show()
+	$HUD/Button.show()
+	$HUD/Button2.show()

@@ -16,3 +16,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Button_button_down():
+	get_node("../Label").visible = false
+	visible = false
+	get_node("../Button2").visible = false
+
+	
+	pass # Replace with function body.
