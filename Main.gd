@@ -13,8 +13,8 @@ func _ready():
 	add_to_group('Universal')
 	NewEnemy()
 	$HUD/Label.hide()
-	$HUD/Button.hide()
-	$HUD/Button2.hide()
+	$HUD/Start.hide()
+	$HUD/Exit.hide()
 	
 func NewEnemy():
 	x = 80
@@ -41,9 +41,9 @@ func _on_Timer_timeout():
 
 func _on_Player_area_entered(area):
 	print("game over")
-	$Player.hide()
-	area.hide()
+	$Player.hide() #pone invicible el player
+	area.hide() #pone invicible la nave enemiga
 	get_node("Timer").stop()
 	$HUD/Label.show()
-	$HUD/Button.show()
-	$HUD/Button2.show()
+	$HUD/Start.show()
+	$HUD/Exit.show()

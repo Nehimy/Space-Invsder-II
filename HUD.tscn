@@ -27,7 +27,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="Start" type="Button" parent="."]
 margin_left = 398.0
 margin_top = 234.0
 margin_right = 597.0
@@ -39,7 +39,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="."]
+[node name="Exit" type="Button" parent="."]
 margin_left = 424.0
 margin_top = 382.0
 margin_right = 578.0
@@ -50,5 +50,6 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_down" from="Button" to="Button" method="_on_Button_button_down"]
-[connection signal="button_down" from="Button2" to="Button2" method="_on_Button2_button_down"]
+[connection signal="button_down" from="Start" to="." method="_on_Start_button_down"]
+[connection signal="button_down" from="Start" to="Start" method="_on_Button_button_down"]
+[connection signal="button_down" from="Exit" to="Exit" method="_on_Button2_button_down"]
